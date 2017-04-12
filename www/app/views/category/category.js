@@ -20,7 +20,7 @@
 
       var mapOptions = {
         center: myLatlng,
-        zoom: 16,
+        zoom: 13,
         mapTypeId: google.maps.MapTypeId.TERRAIN
       };
 
@@ -34,7 +34,6 @@
           title: "My Location"
         });
       });
-
       $scope.map = map;
     });
   });
