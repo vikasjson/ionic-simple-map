@@ -15,9 +15,10 @@
   'use strict';
 
   angular.module('starter').controller('CategoryCtrl', function($scope ) {
-    google.maps.event.addDomListener(window, 'load', function() {
-      var myLatlng = new google.maps.LatLng(37.3000, -120.4833);
+    ionic.Platform.ready(initialize);
 
+    function  initialize() {
+      var myLatlng = new google.maps.LatLng(37.3000, -120.4833);
       var mapOptions = {
         center: myLatlng,
         zoom: 13,
@@ -34,8 +35,15 @@
           title: "My Location"
         });
       });
-      $scope.map = map;
-    });
+
+      var myLocation = new google.maps.Marker({
+        position: new google.maps.LatLng(37.3000, -120.4833),
+        map: map,
+        title: "My Location"
+      });
+      // $scope.map = map;
+    }
+
   });
 
 }).call(this);

@@ -1,5 +1,16 @@
 <ion-view view-title="Home" positive>
   <ion-content>
-    <div id="map" data-tap-disabled="true"></div>
+    <div  ng-show="true" style="width: 100%;position: fixed;top: 0px;left: 0px;z-index: 999">
+      <div style="z-index:9999;margin: 10%;width: 80%;margin-top: 14%; ">
+        <!--<button style="z-index: 9999" class="button button-full button-balanced">Shopping Now</button>-->
+        <!--<input style="z-index: 9999;padding-left: 5%;border: 1px solid deepskyblue;"  type="text" class="form-control " placeholder="Search Location">-->
+        <div style="z-index: 9999;" class="form-group has-feedback">
+          <input style="z-index: 9999;padding-left: 5%;border: 1px solid deepskyblue;"  type="text" class="form-control " placeholder="Search Location">
+          <span class="icon ion-search form-control-feedback"></span>
+        </div>
+      </div>
+    </div>
+    <div id="map" data-tap-disabled="true">
+    </div>
   </ion-content>
 </ion-view>
